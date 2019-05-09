@@ -63,14 +63,14 @@
 \begin{document}
 
 %% Title information
-\title[Short Title]{Application virtualization}         %% [Short Title] is optional;
+\title[Short Title]{Virtualization for porting application }         %% [Short Title] is optional;
                                         %% when present, will be used in
                                         %% header instead of Full Title.
-\titlenote{with title note}             %% \titlenote is optional;
+%\titlenote{with title note}             %% \titlenote is optional;
                                         %% can be repeated if necessary;
                                         %% contents suppressed with 'anonymous'
-\subtitle{Subtitle}                     %% \subtitle is optional
-\subtitlenote{with subtitle note}       %% \subtitlenote is optional;
+\subtitle{or tools to solve a puzzle}                     %% \subtitle is optional
+%\subtitlenote{with subtitle note}       %% \subtitlenote is optional;
                                         %% can be repeated if necessary;
                                         %% contents suppressed with 'anonymous'
 
@@ -135,7 +135,9 @@
 %% Note: \begin{abstract}...\end{abstract} environment must come
 %% before \maketitle command
 \begin{abstract}
-Text of abstract \ldots.
+Migrating applications between language versions is an endeavor task. A developper write an application in a particular version of a language and cannot make preparation to the future language changes. In this article, we explore a solution based on virtualization in the programming language level to port from a version to another. Virtualization is well-known in Operating System (OS). It consists to create a layer with which the application will communicate believing it is the targetted OS. In our case, instead of the OS it is a version of a programming language we target. To do so, we revisit module and virtualization techniques. We chose to validate it by migrating legacy Pharo applications. 
+ 
+
 \end{abstract}
 
 
@@ -175,7 +177,44 @@ Text of abstract \ldots.
 
 \section{Introduction}
 
-Parler de virtualization et comment on fait avec des modules.\ldots
+A software can be view as a patchwork or a puzzle composed by diffrent entities.
+	\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.25]{Images/SoftwareAsAPuzzle.png}
+           \caption{Left: view of a software as a Puzzle. Middle: a representation of an entity composing a software. Right: representation on a dependancy between two entities.}
+	\end{figure}	
+These entities and their links are written in a programming langage. However a used langage is an evolving creature.
+It means with enough evolution it become impossible to read parts of a software written in an old dialect.
+In other words, we lost some pieces of the puzzle.
+We identified the following evolutions provoking missing parts:
+\begin{description}
+    \item[Syntax Changes.] Changes in the syntax make programs that were valid for one version, invalid in another;
+    \item[Compiler Semantic Changes.] Changes in the compiler's semantics keep the same syntax as before but change the compiled code's behavior, breaking the code that makes assumptions on it;
+    \item[Standard Library Changes.] Changes in the classes of the standard libraries invalidate the code that uses it \textit{e.g.,} methods or classes removed, or methods with modified semantics.
+\end{description}
+	\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.25]{Images/MissingPartAsTimeGoes.png}
+        \caption{Missing parts as time goes.}
+	\end{figure}
+	
+One can try to keep the software as much compatible as possible but it is not always possible or straightforward e.g., changes in the language may break the application.
+
+We choose to explore a solution based on virtualization.
+Virtualization is well-known in Operating System (OS) and the problem it solve is similar to ours.
+OS have differences and a software supported by one OS may not be supported by another due to these differences.
+Virtualization is a technique that consist to interpose a layer between a software and an OS.
+The role of the layer is: if the behavior is present to transmit calls to the OS else to take care of the calls.
+We want to achieve the same results but with programming language instead of OS. 
+	\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.25]{Images/VirtualisationIdea.png}
+        \caption{Representation of virtualization technique. The calls to the missing parts are handle by the layer in the middle.}
+	\end{figure}
+	
+In this article, in a first time, we will study the infrastructure needed to construct such a virtualization layer.
+In a second time, we will validate the chosen infrastructure with different migrating scenarios of Pharo application.
+
 
 
 %% Acknowledgments
@@ -198,7 +237,31 @@ Parler de virtualization et comment on fait avec des modules.\ldots
 
 %% Bibliography
 %\bibliography{bibfile}
+\section{Infrastructure for virtualization}
+Through this section, we will details the prerequisites for creating a virtualization layer as we intend (ref fig 3)
+The following features are mandatory.
+\subsection{Late class creation}
+The first hardship is to manage to load our application.
+Indeed, the processus of creation of the entities can be the missing part.  
+New classes in Pharo are created by evaluating a message \#subclass: send to the superclass.
+The superclass is then in charge of class creation by configuring a class builder with the arguments of the message.
+In the case, one of the missing entity is a superclass we cannot create the subclasses.
+A similar problem appear with missing trait, the users of the missing trait will not be complete so broken.
 
+
+\subsection{Representation of missing parts}
+\subsection{Encapsulation}
+\subsection{Dependancy management}
+
+\section{Validation}
+
+\subsection{Methodology}
+
+\subsection{Results}
+
+\section{Related Work}
+
+\section{Conclusion}
 
 %% Appendix
 \appendix
