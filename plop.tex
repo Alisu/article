@@ -240,16 +240,49 @@ In a second time, we will validate the chosen infrastructure with different migr
 \section{Infrastructure for virtualization}
 Through this section, we will details the prerequisites for creating a virtualization layer as we intend (ref fig 3)
 The following features are mandatory.
+
 \subsection{Late class creation}
 The first hardship is to manage to load our application.
 Indeed, the processus of creation of the entities can be the missing part.  
 New classes in Pharo are created by evaluating a message \#subclass: send to the superclass.
+\begin{verbatim}
+    Object subclass: #Car
+        instanceVariableNames: 'color name'
+        uses: TMovableObject
+        classVariableNames: ''
+        category:''
+\end{verbatim}
 The superclass is then in charge of class creation by configuring a class builder with the arguments of the message.
 In the case, one of the missing entity is a superclass we cannot create the subclasses.
-A similar problem appear with missing trait, the users of the missing trait will not be complete so broken.
+A similar problem appear with missing trait, the users of the missing trait will not be complete in other words broken. The classes and traits are similar in their creation hence the solution will be the same.
 
+To handle this problem, we kept our classes as a model looking like an Abstract Syntax Tree(AST).
+This model is simply a representation of the definition of a class in an easy way.
+We enhance the class builder to be configurable with such definition.
+We, then, bypass the superclass which allows us to create classes from their definitions.
+	\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.25]{Images/IncompleteSoftware.png}
+        \caption{Representation of an incomplete loaded software.}
+	\end{figure}
+
+At this point we overlooked the missing pieces, all the non missing parts can almost be loaded but we still need to solve the missing references at least meanwhile we are looking for a better solution.
 
 \subsection{Representation of missing parts}
+
+	\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.25]{Images/UndefinedExplication.png}
+        \caption{The idea behind undefined.}
+	\end{figure}
+	
+	\begin{figure}[H]
+       \centering
+       \includegraphics[scale=0.25]{Images/SoftWithUndefined.png}
+        \caption{A software with undefined.}
+	\end{figure}
+
+
 \subsection{Encapsulation}
 \subsection{Dependancy management}
 

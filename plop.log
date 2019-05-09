@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.30)  9 MAY 2019 08:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.30)  9 MAY 2019 11:18
 entering extended mode
 **./plop.tex
 (plop.tex
@@ -1153,13 +1153,64 @@ Package pdftex.def Info: Images/VirtualisationIdea.png  used on input line 211.
 (pdftex.def)             Requested size: 198.49107pt x 100.62569pt.
 Excluding 'acks' comment.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 243.
+(Font)              scaled to size 7.0pt on input line 244.
  [1.1{C:/Users/Alisu/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
  <./Images/SoftwareAsAPuzzle.png> <./Images/MissingPartAsTimeGoes.png> <./Image
 s/VirtualisationIdea.png>]
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 248.
+
+("D:\Users\Alisu\AppData\Local\Programs\MiKTeX 2.9\tex/latex/inconsolata\t1zi4.
+fd"
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 248.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `T1/zi4/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `T1/zi4/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 254.
+
+
+("D:\Users\Alisu\AppData\Local\Programs\MiKTeX 2.9\tex/latex/inconsolata\ts1zi4
+.fd"
+File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 254.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+<Images/IncompleteSoftware.png, id=79, 242.9075pt x 162.6075pt>
+File: Images/IncompleteSoftware.png Graphic file (type png)
+<use Images/IncompleteSoftware.png>
+Package pdftex.def Info: Images/IncompleteSoftware.png  used on input line 265.
+
+(pdftex.def)             Requested size: 60.72672pt x 40.65176pt.
+<Images/UndefinedExplication.png, id=80, 564.1075pt x 162.6075pt>
+File: Images/UndefinedExplication.png Graphic file (type png)
+<use Images/UndefinedExplication.png>
+Package pdftex.def Info: Images/UndefinedExplication.png  used on input line 27
+5.
+(pdftex.def)             Requested size: 141.02652pt x 40.65176pt.
+<Images/SoftWithUndefined.png, id=81, 242.9075pt x 242.9075pt>
+File: Images/SoftWithUndefined.png Graphic file (type png)
+<use Images/SoftWithUndefined.png>
+Package pdftex.def Info: Images/SoftWithUndefined.png  used on input line 281.
+(pdftex.def)             Requested size: 60.72672pt x 60.72672pt.
+
+Underfull \vbox (badness 1237) has occurred while \output is active []
+
 LaTeX Font Info:    Try loading font information for T1+LinuxBiolinumT-TLF on i
-nput line 272.
+nput line 305.
 
 ("D:\Users\Alisu\AppData\Local\Programs\MiKTeX 2.9\tex/latex/libertine\t1linuxb
 iolinumt-tlf.fd"
@@ -1167,48 +1218,50 @@ File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 272.
+(Font)              scaled to size 10.0pt on input line 305.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 272.
- [2.2
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 272.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 272.
+(Font)              scaled to size 7.0pt on input line 305.
+ [2.2 <./Images/IncompleteSoftware.png> <./Images/UndefinedExplication.png> <./
+Images/SoftWithUndefined.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 305.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 305.
  (plop.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 272.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 272.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 305.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 305.
 Package rerunfilecheck Info: File `plop.out' has not changed.
 (rerunfilecheck)             Checksum: 0A7FD33F32C949B8232B1E425F8BB019;1880.
  ) 
 Here is how much of TeX's memory you used:
- 17790 strings out of 492897
- 269279 string characters out of 3123754
+ 17852 strings out of 492897
+ 270656 string characters out of 3123754
  393957 words of memory out of 3000000
- 21126 multiletter control sequences out of 15000+200000
- 104778 words of font info for 130 fonts, out of 3000000 for 9000
+ 21171 multiletter control sequences out of 15000+200000
+ 105366 words of font info for 132 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 61i,16n,94p,909b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Users/Alisu/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/l
-btn_25tcsq.enc}{D:/Users/Alisu/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvip
-s/libertine/lbtn_7grukw.enc}{D:/Users/Alisu/AppData/Local/Programs/MiKTeX 2.9/f
-onts/enc/dvips/libertine/lbtn_ki75ao.enc}{D:/Users/Alisu/AppData/Local/Programs
-/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{D:/Users/Alisu/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}<D:/Users/Al
-isu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinBiolinumT
-.pfb><D:/Users/Alisu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/liber
-tine/LinLibertineT.pfb><D:/Users/Alisu/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/libertine/LinLibertineTB.pfb><D:/Users/Alisu/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineTBI.pfb><D:/Users/Alisu/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineTI.pf
-b>
-Output written on plop.pdf (2 pages, 407254 bytes).
+ 62i,16n,94p,909b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Users/Alisu/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/inconsolata
+/i4-ts1.enc}{D:/Users/Alisu/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/i
+nconsolata/i4-t1-4.enc}{D:/Users/Alisu/AppData/Local/Programs/MiKTeX 2.9/fonts/
+enc/dvips/libertine/lbtn_25tcsq.enc}{D:/Users/Alisu/AppData/Local/Programs/MiKT
+eX 2.9/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{D:/Users/Alisu/AppData/Local/
+Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_ki75ao.enc}{D:/Users/Alisu/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{D:/
+Users/Alisu/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_76
+gpa5.enc}<D:/Users/Alisu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/i
+nconsolata/Inconsolata-zi4r.pfb><D:/Users/Alisu/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/libertine/LinBiolinumT.pfb><D:/Users/Alisu/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineT.pfb><D:/Users/Al
+isu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertine
+TB.pfb><D:/Users/Alisu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lib
+ertine/LinLibertineTBI.pfb><D:/Users/Alisu/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/libertine/LinLibertineTI.pfb>
+Output written on plop.pdf (2 pages, 456083 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
- 25732 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 136 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 26771 words of extra memory for PDF output out of 29859 (max. 10000000)
 
